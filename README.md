@@ -5,6 +5,12 @@ This module aims to tackle that problem in a generic way. It helps a user with
 admin rights to add extra details in the list view of any model by the new
 functionality added by this module.
 
+
+
+https://github.com/user-attachments/assets/7807ad1d-147e-41da-bc29-a1c7475e39d8
+
+
+
 ## Usage
 
 1. Install this module.
