@@ -1,0 +1,5 @@
+<odoo noupdate="1">
+
+    <function model="list.view.details" name="_action_load_sale_data"/>
+
+</odoo>

@@ -1,0 +1,56 @@
+<odoo>
+
+    <record id="list_view_details_form_view" model="ir.ui.view">
+        <field name="name">list.view.details</field>
+        <field name="model">list.view.details</field>
+        <field name="arch" type="xml">
+            <form string="List View Details">
+                <div class="alert alert-warning" style="margin-bottom: 16px;"
+                    invisible="not id" role="status">
+                    Once created, navigate to the view and update the view with your code.
+                    If changes are not reflected, please refresh the page.
+                </div>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button class="oe_stat_button" name="action_open_related_view"
+                                type="object" icon="fa-bars"
+                                invisible="not view_id">
+                            <div class="o_stat_info">
+                                <span class="o_stat_text">
+                                    QWeb View
+                                </span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <field name="model_id" readonly="id" options="{'no_open': True}" />
+                        <field name="model_name" invisible="1" />
+                        <field name="view_id" invisible="1" />
+                        <field name="qweb_view" widget="code_ir_ui_view"
+                            options="{'mode': 'xml'}" readonly="1" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="list_view_details_list_view" model="ir.ui.view">
+        <field name="name">list.view.details.list</field>
+        <field name="model">list.view.details</field>
+        <field name="arch" type="xml">
+            <list string="List View Details">
+                <field name="model_id" />
+            </list>
+        </field>
+    </record>
+
+    <record id="action_list_view_details" model="ir.actions.act_window">
+        <field name="name">List View Details</field>
+        <field name="res_model">list.view.details</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="menu_list_view_details" name="List View Details"
+        parent="base.next_id_2" sequence="2" action="action_list_view_details" />
+
+</odoo>
